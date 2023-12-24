@@ -1,4 +1,4 @@
-:root {
+:root, :root.normal {
     --border-color: rgb(209, 116, 191);
     --box-bg-color: rgb(235, 232, 195);
     --border-lighter: rgb(230, 169, 228);
@@ -10,6 +10,20 @@
     --visited-color:  rgb(153, 50, 204);
     --bg-color: #ebefd9;
     --shadow: 30px 30px 30px 0px rgb(101, 101, 101);
+}
+
+:root.shiny {
+    --border-color: rgb(32 189 143);
+    --box-bg-color: rgb(24 24 24);
+    --border-lighter: rgb(21 237 105);
+    --border-darker: rgb(7 63 91);
+    --text-color: rgb(20 211 11);
+    --alt-text-color: rgb(241 232 13);
+    --link-color: rgb(77 185 229);
+    --hover-color: rgb(162, 181, 111);
+    --visited-color: rgb(8 72 97);
+    --bg-color: rgb(25, 51, 101);
+    --shadow: 30px 30px 30px 0px rgb(112 141 60);
 }
 
 
@@ -49,11 +63,11 @@ h2{
     overflow-x: hidden;
 }
 
-/*
+
 #first{
-    margin-top: 40vh;
+    margin-top: 20vh;
 }
-*/
+
 .box-effect{
     position:relative;
 
@@ -146,7 +160,7 @@ a:visited {
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
+    :root, :root.normal {
         --border-color: rgb(200, 29, 95);
         --box-bg-color: rgb(2, 43, 57);
         --border-lighter: rgb(180, 104, 178);
@@ -165,6 +179,20 @@ a:visited {
 #logo {
     vertical-align: middle;
     margin-right: 0.25em;
+}
+
+#shinymsg{
+    width:100vw;
+    display: none;
+    position: absolute;
+    border-bottom-color: var(--border-color);
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
+    border-top-color: var(--border-color);
+    border-top-width: 10px;
+    border-top-style: solid;
+    background-color: var(--box-bg-color);
+    z-index: 11;
 }
 
 .widget{
