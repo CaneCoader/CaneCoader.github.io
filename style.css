@@ -1,23 +1,30 @@
 :root {
     --border-color: rgb(209, 116, 191);
-    --bg-color: rgb(235, 232, 195);
+    --box-bg-color: rgb(235, 232, 195);
+    --border-lighter: rgb(230, 169, 228);
+    --border-darker:rgb(106, 9, 103);
+    --text-color :  rgb(245, 121, 33);
     --alt-text-color: rgb(237, 75, 75);
-    --shadow: 30px 30px 30px 0px #656565;
+    --link-color: rgb(98, 115, 211);
+    --hover-color :rgb(177, 241, 242);
+    --visited-color:  rgb(153, 50, 204);
+    --bg-color: #ebefd9;
+    --shadow: 30px 30px 30px 0px rgb(101, 101, 101);
 }
 
 body {
     background-image:url("test-bg.png");
     background-size: 22px;
-
+    background-color: var(--bg-color);
 
     font-family: monospace;
-    color: #f57921;
+    color: var(--text-color);
     font-size: 1.2625rem;
     
 }
 
 a {
-    color: rgb(98, 115, 211);
+    color: var(--link-color);
     text-decoration: none;
 }
 p {
@@ -31,11 +38,11 @@ h1, h2{
     padding-right:1rem;
 }
 p:hover, h1:hover,h2:hover{
-    background-color: rgb(243, 169, 142);
+    background-color: var(--hover-color);
 }			
 h2{
     font-size:1.6625rem;
-    color:var(--bg-color);
+    color:var(--box-bg-color);
 }
 
 .box-effect{
@@ -48,6 +55,7 @@ h2{
 }
 .box-effect::before{
     content: '';
+    object-fit: contain;
     z-index: 0;
     position: absolute;
     top: -20px;
@@ -55,10 +63,11 @@ h2{
     transform: skewX(135deg);
     width:100%;
     height: 20px;
-    background-color: rgb(230, 169, 228);
+    background-color: var(--border-lighter);
 }
 .box-effect::after{
     content: '';
+    object-fit: contain;
     z-index: 0;
     position: absolute;
     left:100%;
@@ -66,18 +75,19 @@ h2{
     transform: skewY(135deg);
     height:100%;
     width: 20px;
-    background-color: rgb(106, 9, 103);
+    background-color: var(--border-darker);
 }
 
 
 table{
 
-
     width:100%;
     border-collapse: collapse;
-    background-color:var(--bg-color);
+    background-color:var(--box-bg-color);
 }
 td{
+
+    
     border-color: var(--border-color);
     border-width: 10px;
     border-style: solid;
@@ -117,25 +127,27 @@ ul{
     list-style-type:none ;
 }
 a:hover {
-    background-color: #f69e60;
+    background-color: var(--hover-color);
 }
 a:visited {
-    color: darkorchid;
+    color: var(--visited-color);
 }
 
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #222;
-        color: #eee;
+    :root {
+        --border-color: rgb(200, 29, 166);
+        --box-bg-color: rgb(0, 41, 47);
+        --border-lighter: rgb(180, 104, 178);
+        --border-darker:rgb(52, 2, 50);
+        --text-color :  rgb(127, 216, 239);
+        --alt-text-color: rgb(235, 239, 127);
+        --link-color: rgb(48, 242, 106);
+        --hover-color :rgb(144, 117, 242);
+        --visited-color:  rgb(7, 156, 12);
+        --bg-color: #222;
     }
 
-    a {
-        color: lightskyblue;
-    }
 
-    a:visited {
-        color: violet;
-    }
 }
 
 #logo {
@@ -143,13 +155,23 @@ a:visited {
     margin-right: 0.25em;
 }
 
-#calendar{
-    border-color: lightcoral;
+.widget{
+    border-color: var(--alt-text-color);
     border-width: 7px;
     border-style: solid;
 }
 
 
+#VHSfilter{
+    position: fixed;
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index: 10;
+
+}
 .next{
     text-align:center;
     color:var(--alt-text-color);
