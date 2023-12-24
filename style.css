@@ -34,7 +34,7 @@ a {
     text-decoration: none;
 }
 p {
-
+    overflow-x: hidden;
     padding-left: 2rem;
     padding-right:2rem;
 }
@@ -46,6 +46,7 @@ p:hover, h1:hover,h2:hover{
 h2{
     font-size:1.6625rem;
     color:var(--box-bg-color);
+    overflow-x: hidden;
 }
 
 /*
@@ -210,4 +211,12 @@ a:visited {
     color:var(--alt-text-color);
     white-space: pre;
     font-size: clamp(0.1rem,1.2625rem, 3vw);
+}
+
+.picture{
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin: auto;
+    display:block;
 }
