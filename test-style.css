@@ -1,0 +1,49 @@
+html{
+    background-image:linear-gradient(#f5e7bc,#f4d788);
+    font-family: monospace;
+    font-size: 14pt;
+}
+
+ul {
+    list-style-type: none;
+    list-style-position: inherit;
+    padding-left: 0;
+
+}
+
+li {
+    border-radius: 2pt;
+    border-color: black;
+    border-style: ridge;
+    margin-top: 10px;
+}
+
+.section{
+    position: relative;
+    min-height: 100vh;
+    border-radius: 5px;
+
+}
+.vertically-centre {
+    margin-top: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#content{
+    float: right;
+    width: 70%;
+}
+#menuBar{
+
+    margin-top: 0;
+    height: 100vh;
+    padding-left: 10%;
+    position: fixed;
+    float:left;
+}
+
+#logo{
+    float: left;
+    max-width: 40%;
+}

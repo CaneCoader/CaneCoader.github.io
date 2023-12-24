@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 6px;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="14.61" y1="141.35" x2="201.82" y2="50.7" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#006eae"/>
+      <stop offset="1" stop-color="#45c3f1"/>
+    </linearGradient>
+  </defs>
+  <rect class="cls-3" x="0" y="0" width="200" height="200" rx="100" ry="100"/>
+  <line class="cls-2" x1="97.07" y1="50.62" x2="59.29" y2="127.02"/>
+  <line class="cls-2" x1="143.76" y1="115.19" x2="97.07" y2="50.62"/>
+  <line class="cls-2" x1="95.19" y1="169.06" x2="59.29" y2="127.02"/>
+  <circle class="cls-1" cx="97.07" cy="50.62" r="33.86"/>
+  <circle class="cls-1" cx="95.19" cy="169.06" r="14.29"/>
+  <circle class="cls-1" cx="59.29" cy="127.02" r="19"/>
+  <circle class="cls-1" cx="143.76" cy="115.19" r="25.43"/>
+</svg>

@@ -1,0 +1,180 @@
+:root {
+    --border-color: rgb(209, 116, 191);
+    --bg-color: rgb(235, 232, 195);
+    --alt-text-color: rgb(237, 75, 75);
+    --shadow: 30px 30px 30px 0px #656565;
+}
+
+body {
+    background-image:url("test-bg.png");
+    background-size: 22px;
+
+
+    font-family: monospace;
+    color: #f57921;
+    font-size: 1.2625rem;
+    
+}
+
+a {
+    color: rgb(98, 115, 211);
+    text-decoration: none;
+}
+p {
+
+    padding-left: 2rem;
+    padding-right:2rem;
+}
+
+h1, h2{
+    padding-left: 1rem;
+    padding-right:1rem;
+}
+p:hover, h1:hover,h2:hover{
+    background-color: rgb(243, 169, 142);
+}			
+h2{
+    font-size:1.6625rem;
+    color:var(--bg-color);
+}
+
+.box-effect{
+    position:relative;
+    max-width:90%;
+    min-width:80%;
+    margin:auto;
+    z-index: 0;
+    box-shadow: var(--shadow);
+}
+.box-effect::before{
+    content: '';
+    z-index: 0;
+    position: absolute;
+    top: -20px;
+    left:10px;
+    transform: skewX(135deg);
+    width:100%;
+    height: 20px;
+    background-color: rgb(230, 169, 228);
+}
+.box-effect::after{
+    content: '';
+    z-index: 0;
+    position: absolute;
+    left:100%;
+    top:-10px;
+    transform: skewY(135deg);
+    height:100%;
+    width: 20px;
+    background-color: rgb(106, 9, 103);
+}
+
+
+table{
+
+
+    width:100%;
+    border-collapse: collapse;
+    background-color:var(--bg-color);
+}
+td{
+    border-color: var(--border-color);
+    border-width: 10px;
+    border-style: solid;
+    
+
+}
+
+th{
+    border-color: var(--border-color);
+    border-width: 10px;
+    border-style: solid;
+    background-color:var(--border-color);
+}
+
+
+.array{
+    padding: 2rem;
+}
+.array table{
+    max-width:initial;
+    min-width: initial;
+    margin: initial;
+}
+
+.array th{
+    border-width: 5px;
+    border-style: solid;
+    padding-left: 1rem;
+    padding-right:1rem;
+}
+.array td{
+    border-width: 2px;
+    padding-right:1rem;
+}
+
+ul{
+    list-style-type:none ;
+}
+a:hover {
+    background-color: #f69e60;
+}
+a:visited {
+    color: darkorchid;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #222;
+        color: #eee;
+    }
+
+    a {
+        color: lightskyblue;
+    }
+
+    a:visited {
+        color: violet;
+    }
+}
+
+#logo {
+    vertical-align: middle;
+    margin-right: 0.25em;
+}
+
+#calendar{
+    border-color: lightcoral;
+    border-width: 7px;
+    border-style: solid;
+}
+
+
+.next{
+    text-align:center;
+    color:var(--alt-text-color);
+}
+
+.arrow-text{
+    text-align:center;
+    font-size: 3em ;
+    width:min-content;
+    margin:auto;
+    font-weight: bold;
+    padding: 1rem 0 1rem 0;
+    z-index:10;
+}
+
+.quote{
+    font-family: serif;
+    font-style: italic;
+    font-size: 1.2625rem;
+    padding-left: 3rem;
+    color:var(--alt-text-color);
+}
+
+.text-art{
+    color:var(--alt-text-color);
+    white-space: pre;
+
+}
