@@ -1,22 +1,22 @@
 :root, :root.normal {
-    --border-color: rgb(209, 116, 191);
+    --border-color: rgb(156, 61, 137);
     --box-bg-color: rgb(235, 232, 195);
-    --border-lighter: rgb(230, 169, 228);
-    --border-darker:rgb(106, 9, 103);
+    --border-lighter: rgb(194, 136, 192);
+    --border-darker:rgb(105, 46, 103);
     --text-color :  rgb(245, 91, 14);
     --alt-text-color: rgb(237, 75, 75);
     --link-color: rgb(98, 115, 211);
     --hover-color :rgb(177, 241, 242);
     --visited-color:  rgb(153, 50, 204);
     --bg-color: #ebefd9;
-    --shadow: 30px 30px 30px 0px rgb(101, 101, 101);
+    --shadow: 30px 30px 30px 0px rgb(20 20 20);
 }
 
 :root.shiny {
     --border-color: rgb(32 189 143);
     --box-bg-color: rgb(24 24 24);
     --border-lighter: rgb(21 237 105);
-    --border-darker: rgb(7 63 91);
+    --border-darker: rgb(3, 39, 57);
     --text-color: rgb(20 211 11);
     --alt-text-color: rgb(241 232 13);
     --link-color: rgb(77 185 229);
@@ -30,8 +30,9 @@
 body {
     width:100%;
     margin:0;
-    background-image:url("test-bg.png");
-    background-size: 22px;
+    background-image:url("shapes.png"), url("test-bg.png");
+    background-size:100vw,  22px;
+
     background-color: var(--bg-color);
 
     font-family: monospace;
@@ -60,23 +61,31 @@ p:hover, h1:hover,h2:hover{
 h2{
     font-size:1.6625rem;
     color:var(--box-bg-color);
+    text-align:center ;
     overflow-x: hidden;
 }
 
 
 #first{
     margin-top: 20vh;
+    
 }
 
 .box-effect{
     position:relative;
 
     max-width: 95vw;
-    min-width: 80vw;
+    min-width: 50vw;
 
     margin:auto;
     z-index: 0;
     box-shadow: var(--shadow);
+    background-color:var(--border-color);
+    margin-top: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: url("noiseTexture.png");
+    background-size: 100%;
 }
 .box-effect::before{
     content: '';
@@ -89,6 +98,8 @@ h2{
     width:100%;
     height: 20px;
     background-color: var(--border-lighter);
+    background-image: url("noiseTexture.png");
+    background-size: 100%;
 }
 .box-effect::after{
     content: '';
@@ -101,57 +112,24 @@ h2{
     height:100%;
     width: 20px;
     background-color: var(--border-darker);
+
 }
 
-
-table{
-    overflow-x: hidden;
-    width:100%;
-    border-collapse: collapse;
+.box-effect > div{
     background-color:var(--box-bg-color);
-}
-td{
-
-    
-    border-color: var(--border-color);
-    border-width: 10px;
-    border-style: solid;
-    
-
+    margin:10px;
+    padding-top:1rem;
+    padding-bottom: 1rem;
 }
 
-th{
-    border-color: var(--border-color);
-    border-width: 10px;
-    border-style: solid;
-    background-color:var(--border-color);
+.box-effect > h2{
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
 }
 
 
-.array{
-    padding: 2rem;
-}
-.array table{
-    max-width:initial;
-    min-width: initial;
-    margin: initial;
-}
 
-.array th{
-    border-width: 5px;
-    border-style: solid;
-    padding-left: 1rem;
-    padding-right:1rem;
-    color:var(--box-bg-color);
-}
-.array td{
-    border-width: 2px;
-    padding-right:1rem;
-}
 
-ul{
-    list-style-type:none ;
-}
 a:hover {
     background-color: var(--hover-color);
 }
@@ -161,16 +139,17 @@ a:visited {
 
 @media (prefers-color-scheme: dark) {
     :root, :root.normal {
-        --border-color: rgb(200, 29, 95);
+        --border-color: rgb(107, 18, 52);
         --box-bg-color: rgb(2, 43, 57);
-        --border-lighter: rgb(180, 104, 178);
-        --border-darker:rgb(52, 2, 50);
+        --border-lighter: rgb(119, 70, 118);
+        --border-darker:rgb(109, 11, 106);
         --text-color :  rgb(127, 216, 239);
         --alt-text-color: rgb(235, 239, 127);
         --link-color: rgb(48, 242, 106);
         --hover-color :rgb(144, 117, 242);
         --visited-color:  rgb(7, 156, 12);
         --bg-color: #222;
+        --shadow: 30px 30px 30px 0px rgb(154, 154, 154);
     }
 
 
@@ -202,16 +181,7 @@ a:visited {
 }
 
 
-#VHSfilter{
-    position: fixed;
-    opacity: 0.2;
-    width: 100%;
-    height: 100%;
-    top:0;
-    left:0;
-    z-index: 10;
 
-}
 .next{
     text-align:center;
     color:var(--alt-text-color);
@@ -222,11 +192,18 @@ a:visited {
     font-size: 3em ;
     width:min-content;
     margin:auto;
-    font-weight: bold;
+    font-weight:10;
     padding: 1rem 0 1rem 0;
     z-index:10;
 }
 
+.arrow{
+    position:relative;
+    display: block;
+    margin: auto;
+    width: clamp(100px, 30vw,200px);
+
+}
 .quote{
     font-family: serif;
     font-style: italic;

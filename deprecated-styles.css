@@ -1,0 +1,59 @@
+table{
+    overflow-x: hidden;
+    width:100%;
+    border-collapse: collapse;
+    background-color:var(--box-bg-color);
+    
+}
+td{
+
+    
+    border-color: var(--border-color);
+    border-width: 10px;
+    border-style: solid;
+
+}
+
+th{
+    border-color: var(--border-color);
+    border-width: 10px;
+    border-style: solid;
+    background-color:var(--border-color);
+}
+
+
+.array{
+    padding: 2rem;
+}
+.array table{
+    max-width:initial;
+    min-width: initial;
+    margin: initial;
+}
+
+.array th{
+    border-width: 5px;
+    border-style: solid;
+    padding-left: 1rem;
+    padding-right:1rem;
+    color:var(--box-bg-color);
+}
+.array td{
+    border-width: 2px;
+    padding-right:1rem;
+}
+
+ul{
+    list-style-type:none ;
+}
+
+#VHSfilter{
+    position: fixed;
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index: 10;
+
+}
