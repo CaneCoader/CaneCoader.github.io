@@ -57,3 +57,18 @@ ul{
     z-index: 10;
 
 }
+
+.next{
+    text-align:center;
+    color:var(--alt-text-color);
+}
+
+.arrow-text{
+    text-align:center;
+    font-size: 3em ;
+    width:min-content;
+    margin:auto;
+    font-weight:10;
+    padding: 1rem 0 1rem 0;
+    z-index:10;
+}

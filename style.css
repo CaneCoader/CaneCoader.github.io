@@ -39,8 +39,8 @@ body {
     width:100%;
     margin:0;
     background-image:url("img/shapes.png"), url("img/test-bg.png");
-    background-position: 50vw 0%, center;
-    background-size:100vw,  22px;
+    background-position: 750px 0%, center;
+    background-size:1500px,  22px;
 
     background-color: var(--bg-color);
 
@@ -90,18 +90,25 @@ h2{
     font-weight: unset;
 }
 
-p:hover, h1:hover,h2:hover, .picture:hover{
+p:hover, h1:hover,h2:hover, .picture:hover, a:hover{
     background-color: var(--hover-color);
+}
+
+a:visited {
+    color: var(--visited-color);
 }
 
 #first{
     margin-top: 20vh;
+    margin-bottom: 10vh;
 }
 
 #first > div{
     display: flex;
     
 }
+
+
 
 .box-effect{
     
@@ -121,6 +128,8 @@ p:hover, h1:hover,h2:hover, .picture:hover{
     padding-bottom: 10px;
     background-image: url("img/noiseTexture.png");
     background-size: 100%;
+
+
 }
 .box-effect::before{
     content: '';
@@ -151,10 +160,7 @@ p:hover, h1:hover,h2:hover, .picture:hover{
 
 }
 
-@keyframes bg-line-move{
-    from {background-position: 0% 0px;}
-    to {background-position: 0% var(--bg-line-height);}
-}
+
 
 .box-effect > div{
     background-image: url("img/lines.png");
@@ -163,10 +169,7 @@ p:hover, h1:hover,h2:hover, .picture:hover{
     margin:10px;
     padding-top:1rem;
     padding-bottom: 1rem;
-    animation-name: bg-line-move;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-duration: 1s;
+
     
 }
 
@@ -178,12 +181,7 @@ p:hover, h1:hover,h2:hover, .picture:hover{
 
 
 
-a:hover {
-    background-color: var(--hover-color);
-}
-a:visited {
-    color: var(--visited-color);
-}
+
 @media screen and (max-width: 400px) {
     .box-effect{
         margin-left: 0;
@@ -209,6 +207,33 @@ a:visited {
 
 
 }
+
+@media (prefers-reduced-motion: no-preference){
+    .grow-anim {
+        animation-name: box-grow;
+        animation-iteration-count: 1;
+        animation-duration: 0.5s;
+    }
+
+    .box-effect > div{
+        animation-name: bg-line-move;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 1s;
+    }
+}
+
+@keyframes box-grow{
+    from {transform: scaleX(0.5);}
+    to {transform: scaleX(1);}
+}
+
+@keyframes bg-line-move{
+    from {background-position: 0% 0px;}
+    to {background-position: 0% var(--bg-line-height);}
+}
+
+
 
 #logo {
     margin-left: 0.25rem;
@@ -239,23 +264,6 @@ a:visited {
     border-style: solid;
 }
 
-
-
-.next{
-    text-align:center;
-    color:var(--alt-text-color);
-}
-
-.arrow-text{
-    text-align:center;
-    font-size: 3em ;
-    width:min-content;
-    margin:auto;
-    font-weight:10;
-    padding: 1rem 0 1rem 0;
-    z-index:10;
-}
-
 .arrow{
     position:relative;
     display: block;
@@ -263,7 +271,6 @@ a:visited {
     padding:1rem 0 1rem 0;
     width: 30%;
     max-width: 150px;
-
 }
 .quote{
 
