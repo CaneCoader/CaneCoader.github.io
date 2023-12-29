@@ -22,4 +22,40 @@ boxes.forEach(box => {
 });
 
 
+var motion = window.matchMedia("(prefers-reduced-motion: no-preference)");
+
+if(motion.matches){
+  const coll = document.querySelectorAll(".collapse");
+  coll.forEach(collButton => {
+    next = collButton.nextElementSibling;
+    next.style.height = 0;
+    next.style.paddingTop = 0;
+    next.style.paddingBottom = 0;
+    collButton.addEventListener("click",function() {
+      
+
+      var content = this.nextElementSibling;
+      
+
+      if (this.classList.contains("active")){
+        content.style.height = 0;
+        content.style.paddingTop = 0;
+        content.style.paddingBottom = 0;
+
+      } else {
+        content.style.height = content.scrollHeight + "px";
+
+        content.style.paddingTop = "1rem";
+        content.style.paddingBottom = "1rem";
+
+      }
+      this.classList.toggle("active");
+    });
+  });
+}
+
+
+
+
+
 

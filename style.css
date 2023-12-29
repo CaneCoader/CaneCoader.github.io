@@ -16,6 +16,7 @@
     --shadow: 30px 30px 30px 0px rgb(20 20 20);
 
     --heading-font: 'Arvo','Consolas', monospace;
+    --default-font:'IBM Plex Mono','Consolas', monospace;
     --bg-line-height:20px;
     overflow-x: hidden;
 }
@@ -32,6 +33,7 @@
     --visited-color: rgb(8 72 97);
     --bg-color: rgb(25, 51, 101);
     --shadow: 30px 30px 30px 0px rgb(112 141 60);
+    
 }
 
 
@@ -44,7 +46,7 @@ body {
 
     background-color: var(--bg-color);
 
-    font-family: 'IBM Plex Mono','Consolas', monospace;
+    font-family: var(--default-font);
     font-weight: 500;
     color: var(--text-color);
     font-size: 1.2625rem;
@@ -73,7 +75,9 @@ a {
     text-decoration: none;
 }
 p {
+    font-family: --var(--default-font);
     overflow-x: hidden;
+    font-size: 1.2625rem;
     padding-left: 2rem;
     padding-right:2rem;
 }
@@ -90,7 +94,37 @@ h2{
     font-weight: unset;
 }
 
-p:hover, h1:hover,h2:hover, .picture:hover, a:hover{
+code{
+    background-color: var(--hover-color);
+    color:var(--alt-text-color);
+    font-family: inherit;
+}
+
+button > p{
+    flex-grow: 1;
+}
+
+button{
+    position: relative;
+    display: flex;
+    border-color: inherit;
+    border-style: none;
+    border-bottom: var(--bg-color) solid 2px;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: var(--default-font);
+    font-size: 1.5rem;
+
+    color:var(--bg-color);
+    box-sizing:content-box;
+    margin: 10px 10px 0 10px;
+    width:calc(100% - 20px);
+
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+
+}
+
+p:hover, h1:hover,h2:hover, .picture:hover, a:hover, button:hover{
     background-color: var(--hover-color);
 }
 
@@ -114,7 +148,7 @@ a:visited {
     
     position:relative;
     min-width: 40vw;
-    max-width: 95vw;
+    max-width: min(1300px,95vw);
 
     width: -moz-fit-content;
     width: fit-content;
@@ -166,17 +200,19 @@ a:visited {
     background-image: url("img/lines.png");
     background-size: auto,var(--bg-line-height);
     background-color:var(--box-bg-color);
-    margin:10px;
+    margin:0 10px 10px 10px;
     padding-top:1rem;
     padding-bottom: 1rem;
-
+    overflow: hidden;
     
+
 }
 
 .box-effect > h2{
 
     padding: 0.5rem 1rem 1rem 1rem;
 }
+
 
 
 
@@ -225,10 +261,31 @@ a:visited {
         animation-iteration-count: infinite;
         animation-timing-function: linear;
         animation-duration: 1s;
+        transition: height 0.2s ease-out,padding 0.2s ease-out;
     }
 
     .arrow{
         animation: arrow-jump 1s steps(1) infinite ;
+    }
+
+    .collapse:after {
+        content: 'V';
+        font-family: var(--default-font);
+        font-size: 2.5em;
+        color: var(--bg-color);
+        display: block;
+
+        margin-left: 5px;
+        margin-right: 1rem;
+
+        transform: rotate(-90deg);
+        transform-origin: center;
+        transition: transform 0.2s ease-out ;
+    }
+      
+    .active:after {
+        content: "V";
+        transform: rotate(0deg);
     }
 
 
