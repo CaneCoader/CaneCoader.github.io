@@ -72,3 +72,12 @@ ul{
     padding: 1rem 0 1rem 0;
     z-index:10;
 }
+
+body{
+    animation: bg-move 10s ease-in-out infinite alternate;
+}
+
+@keyframes bg-move{
+    from{background-position: 0 0, 750px 0, 0 0 ;}
+    to{background-position: 50px 50px, 750px 0, 0 0;}
+}
