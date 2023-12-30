@@ -12,8 +12,9 @@
     --link-color: rgb(98, 115, 211);
     --hover-color :rgb(177, 241, 242);
     --visited-color:  rgb(153, 50, 204);
-    --bg-color: #ebefd9;
+    --bg-color: rgb(242, 242, 210);
     --shadow: 30px 30px 30px 0px rgb(20 20 20);
+    --text-img: url("img/text-light.png");
 
     --heading-font: 'Arvo','Consolas', monospace;
     --default-font:'IBM Plex Mono','Consolas', monospace;
@@ -29,10 +30,11 @@
     --text-color: rgb(20 211 11);
     --alt-text-color: rgb(241 232 13);
     --link-color: rgb(77 185 229);
-    --hover-color: rgb(162, 181, 111);
+    --hover-color: rgb(80, 89, 54);
     --visited-color: rgb(8 72 97);
     --bg-color: rgb(25, 51, 101);
     --shadow: 30px 30px 30px 0px rgb(112 141 60);
+    --text-img: url("img/text-dark.png");
     
 }
 
@@ -40,9 +42,9 @@
 body {
     width:100%;
     margin:0;
-    background-image:url("img/shapes.png"),url('img/bubbles.png'),url('img/text.png'), url("img/test-bg.png");
-    background-position:0 0, 750px 0, 750px 0, 0 0;
-    background-size:1500px,1500px,1500px,  22px;
+    background-image:url("img/shapes.png"),var(--text-img),url('img/bubbles.png'), url("img/bg.png");
+    background-position:0 0, 750px 0, 0 0 ,0 0;
+    background-size:max(1500px, 90vw),max(1500px, 90vw),max(1000px, 90vw),  max(22px, 0.5vw);
 
     background-color: var(--bg-color);
 
@@ -81,6 +83,9 @@ p {
     padding-left: 2rem;
     padding-right:2rem;
 }
+li{
+    color:var(--alt-text-color);
+}
 
 
 			
@@ -98,6 +103,8 @@ code{
     background-color: var(--hover-color);
     color:var(--alt-text-color);
     font-family: inherit;
+    overflow-wrap: break-word;
+
 }
 
 button > p{
@@ -124,9 +131,7 @@ button{
 
 }
 
-p:hover, h1:hover,h2:hover, .picture:hover, a:hover, button:hover{
-    background-color: var(--hover-color);
-}
+
 
 a:visited {
     color: var(--visited-color);
@@ -239,12 +244,17 @@ a:visited {
         --visited-color:  rgb(7, 156, 12);
         --bg-color: #222;
         --shadow: 30px 30px 30px 0px rgb(154, 154, 154);
+        --text-img:url("img/text-dark.png");
     }
 
 
 }
 
 @media (prefers-reduced-motion: no-preference){
+    p:hover, h1:hover,h2:hover, .picture:hover, a:hover, button:hover{
+        background-color: var(--hover-color);
+    }
+
     .grow-anim {
         animation-name: box-grow;
         animation-iteration-count: 1;

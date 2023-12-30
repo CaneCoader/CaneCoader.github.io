@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Monash Algorithms & Problem Solving (MAPS)</title>
+		<title>Monash Algorithms &amp Problem Solving (MAPS)</title>
 		<link rel="stylesheet" href="style.css">
 
 		<link rel="icon" href="img/favicon.ico" />
@@ -47,14 +47,14 @@
 				<div>
 					<p>
 						before you can begin coding, it is important to install an IDE and your language.<br>
-						<a href="https://code.visualstudio.com/">vs code</a> is the most popular IDE.
+						<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">vs code</a> is the most popular IDE.
 					</p>
 				</div>
 				<button type="button" class="collapse"><p>python</p></button>
 				<div>
 					<p>
-						<a href = "https://www.python.org/downloads/"><b>Python</b></a> is the suggested programming language for beginners. 
-						<a href ="https://code.visualstudio.com/docs/python/python-tutorial" title = "python in vs code">this link</a> is a quick guide to using python in vs code.
+						<a href = "https://www.python.org/downloads/" target="_blank" rel="noopener"><b>python</b></a> is the suggested programming language for beginners. 
+						<a href ="https://code.visualstudio.com/docs/python/python-tutorial" title = "python in vs code" target="_blank" rel="noopener">this link</a> is a quick guide to using python in vs code.
 					</p>
 				
 
@@ -72,9 +72,9 @@ ______|_________________________
 				<button type="button" class="collapse"><p>c++</p></button>
 				<div>					
 					<p>
-						<a href = "https://code.visualstudio.com/docs/cpp/config-mingw" title = "install c plus plus"><b>c++</b></a> 
+						<a href = "https://code.visualstudio.com/docs/cpp/config-mingw" title = "install c plus plus" target="_blank" rel="noopener"><b>c++</b></a> 
 						is generally the most popular option for competitive programming due to its speed and versatility. using c++ requires a compiler. 
-						instructions for using c++ with vs code can be found <a href="https://code.visualstudio.com/docs/languages/cpp" title="c plus plus instructions"><b>here. </b></a>
+						instructions for using c++ with vs code can be found <a href="https://code.visualstudio.com/docs/languages/cpp" title="c plus plus instructions" target="_blank" rel="noopener"><b>here. </b></a>
 					</p>
 
 					<p>the main advantages of c++ are: </p>
@@ -86,12 +86,13 @@ ______|_________________________
 |_____|_________________________
 | 2   |less verbose than java
 |_____|_________________________</p>
+					<p>as <code>int</code> in c++ is 32-bit, <code>long long int</code> will sometimes be required if c++ is used.</p>
 				</div>
 				<button type="button" class="collapse"><p>java</p></button>
 				<div>
 
 					<p>
-						<a href = "https://code.visualstudio.com/docs/languages/java" title ="java guide"><b>java </b></a>
+						<a href = "https://code.visualstudio.com/docs/languages/java" title ="java guide" target = "_blank" rel="noopener"><b>java </b></a>
 						is another option for competitive programming.
 					</p>
 				</div>
@@ -112,9 +113,101 @@ ______|_________________________
 				<div>
 					<p>in python, <code>input()</code> is used for reading from console and <code>print()</code> is used for writing to console.</p>
 					<p><code>input()</code> returns a string, so <code>int()</code> must be used for numerical input.</p>
-					<p>to read a line of integers, use <code>list(map(int,input().split()))</code> to return a list of integers</p>
-				
+					<p>
+						to read a line of integers, use <code>list(map(int,input().split()))</code> to return a list of integers. several functions are used
+						to efficiently convert a string in several integers.
+					</p>
+					<p class = "text-art">|function| explanation
+_________|_______________________________
+| split()| this function separates a
+|        | string into a list creating
+|        | a new element when a space
+|        | appears in the string.
+|________|_______________________________
+| map()  | this function processes 
+|        | every element of the second
+|        | argument through through the
+|        | function given as first
+|        | argument. 
+|________|_______________________________
+| list() | this converts the map 
+|        | returned by map() into a list
+|________|_______________________________</p>
+					<p>
+						to read multiple lines containing one integer 
+						<code>[int(input()) for _ in range({number of lines})]</code> can be used. this approach uses 
+						<a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions" target="_blank" rel="noopener">
+							list comprehensions 
+						</a>
+						to succintly called <code>input()</code> multiple times.
+					</p>
+					<p>
+						to output an integer, simply use <code>print()</code>. to print a list of values on one line 
+						<code>" ".join([str i for i in {your list}])</code> can be used.
+					</p>
 
+				</div>
+				<button type="button" class="collapse"><p>c++</p></button>
+				<div>
+					<p>
+						in c++, <code>cin &gt&gt {variable}</code> and <code>cout &lt&lt {variable}</code> are used to read and write from console. 
+						remember to have <code>#include &ltiostream&gt</code> so you have access to the console objects. c++ automatically separates
+						input by whitespace, so using a <a href="https://en.cppreference.com/w/cpp/language/for" target="_blank" rel="noopener" title = "link to c plus plus for loop tutorial">
+						for loop</a> with <code>cin &gt&gt {variable}</code> is usually sufficient.
+					</p>
+					<p>
+						<code>cin &gt&gt {variable-a} &gt&gt {variable-b} &gt&gt {variable-c} ...</code>
+						can be used to read and assign multiple variables in one line.
+					</p> 
+					<p>
+						whilst <code>using namespace std;</code> is discouraged in conventional programming, it is used in competitive 
+						programming as it reduces the amount of characters typed.
+					</p>
+					<p>
+						<code>ios_base::sync_with_stdio(false);</code> and <code>cin.tie(0);</code> can be used to reduce the time taken by reading and writing to console.
+					</p>
+
+					<p>here is a sample template for c++ users: </p>
+					<p class="text-art "><i>#include&ltvector&gt
+#include&ltstring&gt
+#include&ltiostream&gt
+#include&ltalgorithm&gt
+using namespace std;
+
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(0);
+
+}</i></p>
+
+
+				</div>
+
+			</div>
+
+			<img src="img/arrow.png" alt = "arrow" class = "arrow">
+			<div class = "box-effect">
+				<h2>node: design your algorithm</h2>
+				<div>
+					<p>
+						once you have finished reading the input, you need to design an algorithm that solves the problem.
+					</p>
+
+					<p>
+						when designing an algorithm, it is important to ensure that it is always correct for the input space and that it is efficient.
+					</p>
+					<p><b>factors to consider include:</b></p>
+					<ol>
+						<li>are the any edge cases in the problem?</li>
+						<li>will the algorithm be efficient for large inputs?</li>
+						<li>does the algorithm work for small inputs?</li>
+						<li>what data structures should you use in your algorithm?</li>
+					</ol>
+					<p>
+						once you have designed your algorithm, the sample cases can be used to test it for bugs and errors. however, even if the algorithm passes all sample cases,
+						there is no guarantee that you will recieve an <code>AC (all correct)</code> from the judge. if the judge returns a negative result, the result flag indicates
+						how your algorithm failed, whether if it was too slow <code>(TLE)</code>, it encountered an error <code>(RE)</code>, or if it used too much memory <code>(MLE)</code>.  
+					</p>
 				</div>
 
 			</div>
@@ -129,7 +222,7 @@ ______|_________________________
 
 					<p>
 						if you recieve a <code>Time Limit Exceeded (TLE)</code> code upon submitting your program, it is likely that your program has a poor
-						<a href="https://en.wikipedia.org/wiki/Time_complexity">time complexity.</a> reducing the time complexity of a program will likely require
+						<a href="https://en.wikipedia.org/wiki/Time_complexity" target="_blank" rel="noopener">time complexity.</a> reducing the time complexity of a program will likely require
 						a fundamental redesign of your algorithm. 
 					</p>
 				</div>
@@ -145,15 +238,15 @@ ______|_________________________
 					</p>
 					<p class = "text-art">|index| link
 ______|_____________________________
-| 0   |<a href="https://www.freecodecamp.org/news/greedy-algorithms/">greedy algorithms</a>
+| 0   |<a href="https://www.freecodecamp.org/news/greedy-algorithms/" target="_blank" rel="noopener">greedy algorithms</a>
 |_____|_____________________________
-| 1   |<a href="https://www.freecodecamp.org/news/dynamic-programming-made-easy/">dynamic programming</a>
+| 1   |<a href="https://www.freecodecamp.org/news/dynamic-programming-made-easy/" target="_blank" rel="noopener">dynamic programming</a>
 |_____|_____________________________
-| 2   |<a href="https://www.freecodecamp.org/news/python-memoization-recursion-for-loop/">recursion</a>
+| 2   |<a href="https://www.freecodecamp.org/news/python-memoization-recursion-for-loop/" target="_blank" rel="noopener">recursion</a>
 |_____|_____________________________
-| 3   |<a href="https://www.freecodecamp.org/news/binary-search-algorithm-and-time-complexity-explained/">binary search</a>
+| 3   |<a href="https://www.freecodecamp.org/news/binary-search-algorithm-and-time-complexity-explained/" target="_blank" rel="noopener">binary search</a>
 |_____|_____________________________
-| 4   |<a href="https://www.geeksforgeeks.org/difference-between-bfs-and-dfs/">bfs & dfs</a>
+| 4   |<a href="https://www.geeksforgeeks.org/difference-between-bfs-and-dfs/" target="_blank" rel="noopener">bfs & dfs</a>
 |_____|_____________________________</p>
 
 
@@ -201,7 +294,7 @@ ______|_____________________________
             <img src="img/arrow.png" alt = "arrow" class = "arrow">
 			
 			<div class = "box-effect">
-				<h2>website.end()</h2>
+				<h2>guide.end()</h2>
 			</div>
 
 		</main>
