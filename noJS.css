@@ -1,0 +1,13 @@
+@media (prefers-reduced-motion: no-preference){
+    .box-effect{
+        animation-name: box-grow;
+        animation-iteration-count: 1;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+}
+
+.collapse::after{
+    content : '';
+    display: none;
+}

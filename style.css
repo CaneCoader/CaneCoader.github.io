@@ -352,6 +352,7 @@ a:visited:not(.menu) {
     width:100vw;
     display: none;
     position: absolute;
+    top:0;
     border-bottom-color: var(--border-color);
     border-bottom-width: 10px;
     border-bottom-style: solid;
@@ -375,7 +376,7 @@ a:visited:not(.menu) {
     display: block;
     margin: auto;
     padding:2rem 0 1rem 0;
-    width: 30%;
+    width: 30vw;
     max-width: 150px;
 }
 .quote{
