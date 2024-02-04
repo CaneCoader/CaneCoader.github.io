@@ -7,4 +7,4 @@ Things to fix
 4. The website needs to be updated with the new maps room and a link to the location of the new Maps room on Monash wayfinder. 
 
 Things to consider
-1. every link and image does not have a leading forward slash. E.g "img/image.png", is used instead of "/img/image.png" since the latter doesn't work for me, Stackoverflow says having "/" is better, so you may change it.
+1. every link and image does not have a leading forward slash. E.g "img/image.png", is used instead of "/img/image.png" since the latter doesn't work for me, Stackoverflow says having "/" is better, so you may change it.KO
