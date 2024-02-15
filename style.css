@@ -287,9 +287,8 @@ a:visited:not(.menu) {
         animation-fill-mode: forwards;
     }
     .box-effect{
-        transform: scaleX(0.5);
+        opacity: 0;
     }
-
     .box-effect > div{
         
         animation-name: bg-line-move;
@@ -327,9 +326,11 @@ a:visited:not(.menu) {
 }
 
 @keyframes box-grow{
-    from {transform: scaleX(0.5);}
-    to {transform: scaleX(1);}
+    from {opacity: 0.5;}
+    to {opacity:  1;}
 }
+
+
 
 @keyframes bg-line-move{
     from {background-position: 0% 0px;}
