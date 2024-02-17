@@ -8,3 +8,13 @@ Things to fix
 
 Things to consider
 1. every link and image does not have a leading forward slash. E.g "img/image.png", is used instead of "/img/image.png" since the latter doesn't work for me, Stackoverflow says having "/" is better, so you may change it.KO
+
+fonts:
+
+silkscreen
+comfortaa
+major mono display
+space mono
+IBM plex mono
+dm serif display
+arvo

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=DM+Serif+Display&family=IBM+Plex+Mono:ital,wght@0,500;0,700;1,500&family=Major+Mono+Display&family=Space+Mono:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Silkscreen:wght@400;700&display=swap');
 
 :root,
 :root.normal {
@@ -16,7 +16,7 @@
 	--shadow: 30px 30px 30px 0px rgb(20, 20, 20);
 	--text-img: url('img/text-light.webp');
 
-	--heading-font: "Arvo", "Consolas", monospace;
+	--heading-font: "Silkscreen", "Consolas", monospace;
 	--norm-font: "IBM Plex Mono", "Consolas", monospace;
 	--bg-line-height: 20px;
 	overflow-x: hidden;
@@ -54,7 +54,7 @@ body {
 	background-color: var(--bg-color);
 
 	font-family: var(--norm-font);
-	font-weight: 500;
+	font-weight: 400;
 	color: var(--text-color);
 	font-size: 1.2625rem;
 	overflow-x: hidden;
@@ -70,10 +70,10 @@ main {
 
 h1 {
 	padding-left: 1rem;
-	font-family: "Arvo",'DM Serif Display', 'Consolas', monospace;
+	font-family: "Silkscreen", 'Consolas', monospace;
 	font-weight: 400;
 	letter-spacing: unset;
-	font-weight: unset;
+
 	font-size: clamp(10px, 8vw, 50px);
 	line-height: 1;
 }
@@ -96,7 +96,7 @@ li {
 h2 {
 	font-size: 1.6625rem;
 	color: var(--box-bg-color);
-	font-weight: 700;
+	font-weight: 400;
 	text-align: center;
 	overflow-x: hidden;
 	font-family: var(--heading-font);
@@ -127,6 +127,7 @@ button {
 	border-bottom: var(--bg-color) solid 2px;
 	background-color: rgba(0, 0, 0, 0);
 	font-family: var(--norm-font);
+	font-weight: 500;
 	font-size: 1.5rem;
 
 	color: var(--bg-color);
@@ -156,7 +157,7 @@ a:visited:not(.menu) {
 .box-effect {
 	position: relative;
 	min-width: 40vw;
-	max-width: min(1300px, 95vw);
+	max-width: min(1100px, 95vw);
 
 	width: -moz-fit-content;
 	width: fit-content;
@@ -327,7 +328,7 @@ a:visited:not(.menu) {
 
 #blog {
 	width: 90%;
-	background-color: var(--box-bg-color);
+
 }
 
 #logo {
@@ -389,9 +390,11 @@ pre{
     font-size: clamp(0.1rem,1.2625rem, 3vw);
 
     overflow-x: hidden;
-    font-size: 1.2625rem;
+
     padding-left: 2rem;
     padding-right:2rem;
+	font-family: var(--norm-font);
+	font-weight: 400;
 }
 
 
